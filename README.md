@@ -1,5 +1,6 @@
 LÀM FORM LOGIN VÀ REGISTER 
-  - Kết hợp các HTML, CSS, Bootstrap, PHP, MySQL để thực hiện dự  
+  - Kết hợp các HTML, CSS, Bootstrap, PHP, MySQL để thực hiện dự án
+  
   
   
 GIAO DIỆN
