@@ -1,3 +1,26 @@
+<?php
+    // ket noi database
+    include("config.php");
+    $username = $_POST["username"];
+    $password = $_POST["password"];
+
+    // doc du lieu tu database
+    $sql = "select email, pass from acc where email='$username' and pass ='$password'";
+    $result = mysqli_query($conn,$sql);
+    $count = mysqli_num_rows($result);
+    // gui du lieu len website
+    if($count == 1){
+        header("location: http://google.com");
+        exit();
+    }else{
+        header("location: ../login/login.php");
+        exit();
+    }
+    mysqli_close($conn);
+
+  
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -28,7 +51,7 @@
     <div id="tag">
         <div class="form-content">
             <h3>Login</h3>
-            <form action="login.php" method="POST">
+            <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
                 <div class="mb-3 form-floating ">
                     <input type="email" class="form-control" id="floatingInput" placeholder="Account?" name="username">
                     <label for="floatingInput"><i class="fas fa-user-alt"></i>Account</label>

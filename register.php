@@ -93,6 +93,8 @@
         }
     }
 ?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -198,7 +200,7 @@
                 <button type="submit" class="btn btn-primary">Register</button>
                 <div class="mb-3 text-bottom">
                     <label>Already have an account?</label>
-                    <a href="index.html">login here</a>
+                    <a href="login.php">login here</a>
                 </div>  
             </form>
         </div>
