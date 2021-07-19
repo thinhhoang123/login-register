@@ -10,11 +10,12 @@
     $count = mysqli_num_rows($result);
     // gui du lieu len website
     if($count == 1){
+        //go into another page
         header("location: http://google.com");
         exit();
     }else{
-        header("location: ../login/login.php");
-        exit();
+        $message = "Wrong password or username";
+        echo "<script type='text/javascript'>alert('$message');</script>";
     }
     mysqli_close($conn);
 
@@ -87,4 +88,5 @@
        
     </div>
 </body>
+
 </html>
